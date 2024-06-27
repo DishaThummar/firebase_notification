@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "310259181621",
+    "project_id": "demonotification-3f6fa",
+    "storage_bucket": "demonotification-3f6fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310259181621:android:3b6783f6df4cc8df25e97c",
+        "android_client_info": {
+          "package_name": "com.example.notificationdemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUkCGIdYyjU1Tm41DRzawnj9qpgLj9ENU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
