@@ -139,3 +139,30 @@ Future<void> registerNotification() async {
     print('User declined or has not accepted permission');
   }
 }
+void showLocalNotification({
+  required String title,
+  required String body,
+  String? payload,
+}) async {
+  const AndroidNotificationDetails androidDetails = AndroidNotificationDetails(
+    'high_importance_channel',
+    'High Importance Notifications',
+    channelDescription: 'This channel is used for important notifications.',
+    importance: Importance.max,
+    priority: Priority.high,
+    showWhen: false,
+    icon: '@mipmap/ic_launcher',
+  );
+
+  const NotificationDetails platformDetails = NotificationDetails(
+    android: androidDetails,
+  );
+
+  await flutterLocalNotificationsPlugin.show(
+    0,
+    title,
+    body,
+    platformDetails,
+    payload: payload,
+  );
+}

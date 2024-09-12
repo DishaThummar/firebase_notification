@@ -10,7 +10,7 @@ void main() async {
   );
   print("Here .. Hello ");
   await notificationFn();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,10 +21,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Firebase Messaging Example'),
+          backgroundColor: Colors.blue,
+          title: const Text('Firebase Messaging'),
         ),
         body: Center(
-          child: Text('Notification'),
+          child: ElevatedButton(
+            onPressed: () {
+              showLocalNotification(
+                title: 'Hello!',
+                body: 'This is a local notification',
+                payload: 'Notification Payload',
+              );
+            },
+            child: Text('Show Notification'),
+          ),
         ),
       ),
     );
